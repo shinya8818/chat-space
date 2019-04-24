@@ -15,7 +15,7 @@
 
 |Column|Type|Option|
 |------|----|------|
-|body  |text|null: false|
+|body  |text|------|
 |image |string|----|
 |user_id|integer|null: false, foreign_key: ture|
 |group_id|integer|foreign_key: true|
@@ -38,6 +38,7 @@
 ### Association
 - has_many :messeges
 - has_many :groups, through: :members
+- has_many :members
 
 ### インデックス
 " add_index:users, :name"
@@ -46,9 +47,9 @@
 ## groupsテーブル
 |column|Type|Option|
 |------|----|------|
-|user_id|integer|null: false, foreign_key: true|
-|group_name|string|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :users, through: :members
+- has_many :members
 - has_many :messeges
