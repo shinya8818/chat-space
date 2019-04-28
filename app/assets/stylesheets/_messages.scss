@@ -133,36 +133,52 @@
         }
       }
     }
-    &__bottom {
-      width: calc(100vw - 300px);
-      height: 100px;
-      padding: 0 40px;
-      background-color: #DCDCDC;
-      position: absolute;
-      bottom: 0px;
-      &__textfield {
-        resize: none;
-        width: 900px;
-        font-size: 16px;
-        color: #434A54;
+  }
+  .form {
+    bottom: 0;
+    position: fixed;
+    padding: 20px 40px;
+    background-color: #dddddd;
+    width: calc(100vw - 100px);
+
+    form.new-message {
+      margin: auto;
+
+
+      .input-box {
         height: 50px;
-        margin: 10px 0;
-        position: absolute;
-      }
-      .fa-picture-o {
+        display: flex;
         position: relative;
-        right: 250px;
-        top: 30px;
-        color: #333333;
-        float: right;
-      }
-      &__send {
-        background-color: #38AEF0;
-        color: white;
-        height: 40px;
-        width: 70px;
-        float: right;
-        margin: 15px 70px 15px 0;
+
+
+        .input-box__text {
+          width: calc(100vw - 500px);
+          margin: 0 15px 0 10px;
+          padding-left: 10px;
+          font-size: 16px;
+          color: Black;
+        }
+        label.input-box__image {
+          position: absolute;
+          top: 12px;
+          right: 400px;
+          cursor: pointer;
+
+          .icon {
+            font-size: 20px;
+          }
+          #upload-icon {
+            display: none;
+          }
+        }
+        .submit-btn {
+          background-color:#38AEF0;
+          color: white;
+          height: 50px;
+          width: 100px;
+          text-align: center;
+          cursor: pointer;
+        }
       }
     }
   }

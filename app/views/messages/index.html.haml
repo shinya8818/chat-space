@@ -36,7 +36,12 @@
           %p.chatbar__main__message__text
             こんにちは
           = render partial: "message"
-    .chatbar__bottom
-      %input{type: "text" , placeholder: "type a message" , class: "chatbar__bottom__textfield"}
-        %i.fa.fa-picture-o
-        %input{type: "submit" , value: "send" , class: "chatbar__bottom__send"}
+    .form
+      %form.new-message
+        .input-box
+          %input.input-box__text{placeholder: "type a message"}
+          %label.input-box__image{for: "upload-icon"}
+            %icon.fa.fa-picture-o
+            %input{type: "file", id: "upload-icon"}
+            .input-box__image__file
+          %input.submit-btn{:type => "submit", :value => "Send"}
