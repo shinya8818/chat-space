@@ -1,0 +1,162 @@
+.notice {
+  background-color: #3baefd;
+  text-align: center;
+  color: white;
+}
+.contents {
+  width: 100vw;
+  height: 100%;
+  background-color: white;
+  position: fixed;
+}
+.sidebar {
+  width: 300px;
+  height: 100%;
+  background-color: #2f3e51;
+  color: white;
+  float: left;
+  position: fixed;
+  &__top {
+    height: 100px;
+    background-color: #253141;
+    line-height: 100px;
+    padding: 0 20px;
+    h1 {
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+      float: left;
+    }
+    .fa {
+      display: inline-block;
+      color: white;
+      float: right;
+      line-height: 100px;
+    }
+  }
+  &__bottom {
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    padding: 0 20px;
+    overflow: scroll;
+    &__groups__name {
+      margin-top: 20px;
+      margin-bottom: 5px;
+      color: white;
+      font-size: 15px;
+    }
+    &__groups__text {
+      color: white;
+      list-style: none;
+      font-size: 11px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.chatbar {
+  width: calc(100vw - 300px);
+  height: 100%;
+  float: right;
+  background-color: white;
+  &__top {
+    width: calc(100vw - 300px);
+    height: 100px;
+    background-color: white;
+    padding: 0 40px;
+    border-bottom: solid 1px #eee;
+    &__left {
+      width: 70%;
+      &__name {
+        font-size: 20px;
+        color: #333333;
+        padding-top: 35px;
+      }
+      &__member {
+        margin-top: 15px;
+        font-size: 12px;
+        text-align: center;
+        float: left;
+        color: #999999;
+      }
+    }
+    &__right {
+      width: 30%;
+      float: right;
+      line-height: 100px;
+      position: relative;
+      bottom: 30px;
+      button {
+        color: #38AEF0;
+        border-color: #38AEF0;
+        height: 40px;
+        width: 40%;
+        float: right;
+        margin-right: 80px;
+        font-size: 18px;
+        text-decoration: none;
+      }
+    }
+  }
+  &__main {
+    background-color: #fafafa;
+    padding: 46px 40px;
+    height: calc(100% - 200px);
+    width: calc(100vw - 300px);
+    &__message {
+      padding-bottom: 40px;
+      &__name {
+        color: #434A54;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 10px;
+        float: left;
+      }
+      &__datetime {
+        font-size: 12px;
+        padding-left: 10px;
+        color: #999999;
+        float: left;
+        line-height: 10px;
+      }
+      &__text {
+        padding-top: 10px;
+        font-size: 14px;
+        color: #434A54;
+        clear: both;
+      }
+    }
+  }
+  &__bottom {
+    width: calc(100vw - 300px);
+    height: 100px;
+    padding: 0 40px;
+    background-color: #DCDCDC;
+    position: absolute;
+    bottom: 0px;
+    &__textfield {
+      resize: none;
+      width: 900px;
+      font-size: 16px;
+      color: #434A54;
+      height: 50px;
+      margin: 10px 0;
+      position: absolute;
+    }
+    .fa-picture-o {
+      position: relative;
+      right: 250px;
+      top: 30px;
+      color: #333333;
+      float: right;
+    }
+    &__send {
+      background-color: #38AEF0;
+      color: white;
+      height: 40px;
+      width: 70px;
+      float: right;
+      margin: 15px 70px 15px 0;
+    }
+  }
+}
