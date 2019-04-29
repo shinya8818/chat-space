@@ -6,17 +6,18 @@
         = current_user.name
       %ul.lists
         %li.list
-          =link_to do
+          =link_to new_group_path do
             %i.fa.fa-pencil-square-o
         %li.list
           =link_to edit_user_path(current_user) do
             %i.fa.fa-cog
     .sidebar__bottom
-      %ul.sidebar__bottom__groups__name
-        test
-      %li.sidebar__bottom__groups__text
-        こんにちは
-      = render partial: "group"
+      - current_user.groups.each do |group|
+        = link_to group_messages_path(group) do
+          %ul.sidebar__bottom__groups__name
+            = group.name
+          %li.sidebar__bottom__groups__text
+            こんにちは
   .chatbar
     .chatbar__top
       .chatbar__top__left
@@ -36,7 +37,6 @@
             2019/04/28 10:51:44
           %p.chatbar__main__message__text
             こんにちは
-          = render partial: "message"
     .form
       %form.new-message
         .input-box
