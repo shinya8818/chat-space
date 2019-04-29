@@ -2,13 +2,14 @@
 .contents
   .sidebar
     .sidebar__top
-      %h1 若林真也
+      %h1.sidebar__top__name
+        = current_user.name
       %ul.lists
         %li.list
           =link_to do
             %i.fa.fa-pencil-square-o
         %li.list
-          =link_to do
+          =link_to edit_user_path(current_user) do
             %i.fa.fa-cog
     .sidebar__bottom
       %ul.sidebar__bottom__groups__name
