@@ -1,8 +1,11 @@
-%li.chatbar__main__message
-  %p.chatbar__main__message__name
-    若林真也
-  %p.chatbar__main__message__datetime
-    2019/04/28 10:51:44
-  %p.chatbar__main__message__text
-    こんにちは
-    
+.message{ 'data-message-id': message.id }
+	.upper-message
+		.upper-message__name 
+			= message.user.name
+		.upper-message__time
+			= message.created_at.to_s
+	.lower-message
+		- if message.content.present?
+			%p.lower-message__content
+			= message.content
+		= image_tag message.image.url, class: 'lower-message__image' if message.image.present?

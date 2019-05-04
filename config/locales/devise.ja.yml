@@ -60,3 +60,5 @@ ja:
       not_saved:
         one: "エラーが発生したため %{resource} は保存されませんでした:"
         other: "%{count} 件のエラーが発生したため %{resource} は保存されませんでした:"
+      blank: "を入力してください"
+      required: "を入力してください"
