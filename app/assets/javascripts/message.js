@@ -32,15 +32,15 @@ $(function(){
       processData: false,
       contentType: false
     })
-    .done(function(data){
-      var html = buildHTML(data);
+    .done(function(message_data){
+      var html = buildHTML(message_data);
       $('.messages').append(html);
       $('.form__message').val('');
       $('.hidden').val('');
       always()
       $('.messages').animate({scrollTop:$('.messages')[0].scrollHeight},'fast');
     })
-    .fail(function(data){
+    .fail(function(){
       alert('error');
       always()
     })
