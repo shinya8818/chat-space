@@ -10,172 +10,172 @@
 	background-color: $white;
 	position: fixed; 
 }
-.sidebar {
-	width: 300px;
-	height: 100%;
-	background-color: $right-blue;
-	color: $white;
-	float: left;
-	position: fixed;
-	&__top {
-		height: 100px;
-		background-color: $deep-blue;
-		padding: 0 20px; 
-		line-height: 100px;
-		 h1 {
-			font-size: 16px;
-			color: $white;
-			font-weight: bold;
-			width: 100px;
-			float: left;
-		}
-		.lists {
-			padding-top: 40px;
-			padding-right: 20px;
-			.icon {
+	.sidebar {
+		width: 300px;
+		height: 100%;
+		background-color: $right-blue;
+		color: $white;
+		float: left;
+		position: fixed;
+		&__top {
+			height: 100px;
+			background-color: $deep-blue;
+			padding: 0 20px; 
+			line-height: 100px;
+			h1 {
+				font-size: 16px;
 				color: $white;
-				float: right;
-			}
-		}
-	}
-	&__bottom {
-		height: calc(100% - 100px);
-		padding: 0 20px;
-		overflow: auto;
-		background-color: #2f3e51;
-		.sidebar__bottom__groups-content {
-			padding: 0 20px;
-
-			.group__name {
-				font-size: 15px;
-				color: $white;
-				padding: 20px 0 5px 0;
-			}
-			.group__body {
-				font-size: 11px;
-				color: $white;
-				padding-bottom: 40px;
-			}
-		}
-	}
-}
-.chatbar {
-	width: calc(100vw - 300px);
-	height: 100%;
-	float: right;
-	background-color: $white; 
-
-	&__top {
-		width: calc(100vw - 300px);
-		height: 100px;
-		background-color :white;
-		padding: 0 20px;
-		.chatbar__top__left {
-			width: 70%;
-			&__name {
-				font-size: 20px;
-				color: $black;
-				padding-top: 20px;
-				padding-bottom: 5px; 
-			}
-			&__member {
-				font-size: 12px;
-				text-align: center;
-				color: $right-gray;
+				font-weight: bold;
+				width: 100px;
 				float: left;
 			}
+			.lists {
+				padding-top: 40px;
+				padding-right: 20px;
+				.icon {
+					color: $white;
+					float: right;
+				}
+			}
 		}
-		.chatbar__top__right {
-			border: 1px solid $blue;
-      color: $blue;
-      float: right;
-      height: 40px;
-      line-height: 40px;
+		&__bottom {
+			height: calc(100% - 100px);
 			padding: 0 20px;
-			position: relative;
-			right: 60px;
-			bottom: 25px;
-			&__button {
-				color: $blue;
-        text-decoration: none;
+			overflow: auto;
+			background-color: #2f3e51;
+			&__groups-content {
+				padding: 0 20px;
+
+				.group__name {
+					font-size: 15px;
+					color: $white;
+					padding: 20px 0 5px 0;
+				}
+				.group__body {
+					font-size: 11px;
+					color: $white;
+					padding-bottom: 40px;
+				}
 			}
 		}
 	}
-	.messages {
-    background-color: $main;
-		height: calc(100% - 150px - 80px);
+	.chatbar {
 		width: calc(100vw - 300px);
-		padding-top: 46px;
-		overflow: scroll;
-		.message {
-			margin-bottom: 40px;
+		height: 100%;
+		float: right;
+		background-color: $white; 
+
+		&__top {
+			width: calc(100vw - 300px);
+			height: 100px;
+			background-color :white;
 			padding: 0 20px;
-	    .upper-message {
-	      background-color: $main;
-	      display: flex;
-	      &__name {
-	        color: $black;
-	        font-size: 16px;
-	        font-weight: bold;
-	        line-height: 10px;
-	      }
-	      &__time{
-	        color: $right-gray;
-	        font-size: 12px;
-	        padding-left: 10px;
-	        line-height: 10px;
-	      }
-	    }
-	    .lower-message {
-	      margin-top: 10px;
-	      background-color: $main;
-        color: $black;
-        font-size: 14px;
-      }
-	  }
+			&__top__left {
+				width: 70%;
+				&__name {
+					font-size: 20px;
+					color: $black;
+					padding-top: 20px;
+					padding-bottom: 5px; 
+				}
+				&__member {
+					font-size: 12px;
+					text-align: center;
+					color: $right-gray;
+					float: left;
+				}
+			}
+			&__right {
+				border: 1px solid $blue;
+				color: $blue;
+				float: right;
+				height: 40px;
+				line-height: 40px;
+				padding: 0 20px;
+				position: relative;
+				right: 60px;
+				bottom: 25px;
+				&__button {
+					color: $blue;
+					text-decoration: none;
+				}
+			}
+		}
+		.messages {
+			background-color: $main;
+			height: calc(100% - 150px - 80px);
+			width: calc(100vw - 300px);
+			padding-top: 46px;
+			overflow: scroll;
+			.message {
+				margin-bottom: 40px;
+				padding: 0 20px;
+				.upper-message {
+					background-color: $main;
+					display: flex;
+					&__name {
+						color: $black;
+						font-size: 16px;
+						font-weight: bold;
+						line-height: 10px;
+					}
+					&__time{
+						color: $right-gray;
+						font-size: 12px;
+						padding-left: 10px;
+						line-height: 10px;
+					}
+				}
+				.lower-message {
+					margin-top: 10px;
+					background-color: $main;
+					color: $black;
+					font-size: 14px;
+				}
+			}
+		}
+
+		.form {
+			position: absolute; bottom: 0px;
+			background-color: $chat;	
+			width: calc(100vw - 300px); 
+			height: 50px;
+			padding: 20px;
+			&__message {
+				border: none;
+				float: left;
+				height: 50px;
+				width: calc(100% - 180px);
+			}
+			&__mask {
+				background-color: $white;
+				float: left;
+				height: 50px;
+				padding-right: 10px;
+				&__image {
+					font-size: 20px;
+					line-height: 50px;
+					position: relative;
+					top:15px;
+				}
+				.hidden {
+					display: none;
+				}
+			}
+			&__submit {
+				background-color: $blue;
+				border: none;
+				color: $white;
+				float: right;
+				font-size: 16px;
+				height: 50px;
+				margin-left: 15px;
+				padding: 0 30px;
+				position: absolute;
+			}
+		}
 	}
 
-	.form {
-		position: absolute; bottom: 0px;
-		background-color: $chat;	
-		width: calc(100vw - 300px); 
-		height: 50px;
-		padding: 20px;
-    &__message {
-      border: none;
-      float: left;
-      height: 50px;
-      width: calc(100% - 180px);
-    }
-    &__mask {
-      background-color: $white;
-      float: left;
-      height: 50px;
-      padding-right: 10px;
-      &__image {
-        font-size: 20px;
-				line-height: 50px;
-				position: relative;
-				top:15px;
-      }
-      .hidden {
-        display: none;
-      }
-    }
-    &__submit {
-      background-color: $blue;
-      border: none;
-      color: $white;
-      float: right;
-      font-size: 16px;
-      height: 50px;
-      margin-left: 15px;
-      padding: 0 30px;
-      position: absolute;
-    }
-  }
-}
-
-li {
-	list-style: none;
-}
+	li {
+		list-style: none;
+	}
