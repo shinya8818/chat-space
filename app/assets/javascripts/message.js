@@ -1,7 +1,7 @@
 $(function(){
   function buildHTML(message__json){
     var image_url = (message__json.image_url)? `<image class="lower-message_image" src="${message__json.image_url}">`:"";
-    var html = `<div class="message" id='${message__box.json}'>
+    var html = `<div class="message" id='${message__json.json}'>
       <div class="upper-message" >
         <div class="upper-message__name">
           ${message__json.name}
