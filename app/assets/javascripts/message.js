@@ -1,18 +1,18 @@
 $(function(){
-  function buildHTML(message__box){
-    var image_url = (message__box.image_url)? `<image class="lower-message_image" src="${message__box.image_url}">`:"";
-    var html = `<div class="message" id='${message__box.id}'>
+  function buildHTML(message){
+    var image_url = (message.image_url)? `<image class="lower-message_image" src="${message.image_url}">`:"";
+    var html = `<div class="message" id='${message.id}'>
       <div class="upper-message" >
         <div class="upper-message__name">
-          ${message__box.name}
+          ${message.name}
       </div>
         <div class="upper-message__time">
-          ${message__box.time}
+          ${message.time}
       </div>
     </div>
       <div class="lower-message">
         <p class="lower-message__content"></p>
-          ${message__box.content}
+          ${message.content}
           ${image_url}
       </div>`
     return html;
@@ -40,7 +40,7 @@ $(function(){
       always()
       $('.messages').animate({scrollTop:$('.messages')[0].scrollHeight},'fast');
     })
-    .fail(function(data){
+    .fail(function(){
       alert('error');
       always()
     })
