@@ -1,0 +1,20 @@
+ .chatbar
+    .chatbar__top
+      .chatbar__top__left
+        .chatbar__top__left__name
+          SampleGroup
+        .chatbar__top__left__member
+          Member:SampleUser
+      .chatbar__top__right
+        %button_tag 
+          Edit
+    .message
+      = render @messages
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'

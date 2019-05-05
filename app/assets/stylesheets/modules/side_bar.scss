@@ -1,0 +1,49 @@
+	.sidebar {
+		width: 300px;
+		height: 100%;
+		background-color: $right-blue;
+		color: $white;
+		float: left;
+		position: fixed;
+		&__top {
+			height: 100px;
+			background-color: $deep-blue;
+			padding: 0 20px; 
+			line-height: 100px;
+			h1 {
+				font-size: 16px;
+				color: $white;
+				font-weight: bold;
+				width: 100px;
+				float: left;
+			}
+			.lists {
+				padding-top: 40px;
+				padding-right: 20px;
+				.icon {
+					color: $white;
+					float: right;
+				}
+			}
+		}
+		&__bottom {
+			height: calc(100% - 100px);
+			padding: 0 20px;
+			overflow: auto;
+			background-color: #2f3e51;
+			&__groups-content {
+				padding: 0 20px;
+
+				&__name {
+					font-size: 15px;
+					color: $white;
+					padding: 20px 0 5px 0;
+				}
+				&__body {
+					font-size: 11px;
+					color: $white;
+					padding-bottom: 40px;
+				}
+			}
+		}
+	}

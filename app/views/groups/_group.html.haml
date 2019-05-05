@@ -1,0 +1,8 @@
+- current_user.groups.each do |group|
+  .sidebar__bottom__groups-content
+    = link_to group_messages_path(group) do
+      %p.group__name
+        = group.name
+      %p.group__body
+        = group.show_last_message
+        
