@@ -1,18 +1,18 @@
 $(function(){
-  function buildHTML(message){
-    var image_url = (message.image_url)? `<image class="lower-message_image" src="${message.image_url}">`:"";
-    var html = `<div class="message" id='${message.id}'>
+  function buildHTML(message_json){
+    var image_url = (message_json.image_url)? `<image class="lower-message_image" src="${message_json.image_url}">`:"";
+    var html = `<div class="message" id='${message_json.id}'>
       <div class="upper-message" >
         <div class="upper-message__name">
-          ${message.name}
+          ${message_json.name}
       </div>
         <div class="upper-message__time">
-          ${message.time}
+          ${message_json.time}
       </div>
     </div>
       <div class="lower-message">
         <p class="lower-message__content"></p>
-          ${message.content}
+          ${message_json.content}
           ${image_url}
       </div>`
     return html;
