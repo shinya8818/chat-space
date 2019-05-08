@@ -61,14 +61,14 @@
       width: 70%;
     }
 
-    .chat-group-form__label {
+    &__label {
       display: block;
       line-height: 50px;
       font-weight: bold;
       text-align: right;
     }
 
-    .chat-group-form__input {
+    &__input {
       float: left;
       width: 100%;
       line-height: 30px;
