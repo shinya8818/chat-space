@@ -36,11 +36,10 @@ $(document).on('turbolinks:load', function(){
       .done(function(data){
         var html = buildHTML(data);
         $('.messages').append(html);
-        $('.form__message').val('');
-        $('.hidden').val('');
+        document.form__message.reset();
+        document.hidden.reset();
         always()
         $('.messages').animate({scrollTop:$('.messages')[0].scrollHeight},'fast');
-        $('.js-form')[0].reset();
       })
       .fail(function(){
         alert('error');
