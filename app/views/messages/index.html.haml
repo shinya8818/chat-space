@@ -20,7 +20,9 @@
         .chatbar__top__left__name
           = @group.name
         .chatbar__top__left__member
-          Member:SampleUser
+          Member:
+          - @group.users.each do |user|
+            = user.name
       .chatbar__top__right
         = link_to 'Edit', edit_group_path(@group), class: "chatbar__top__right__button"
 
