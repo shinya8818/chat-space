@@ -1,9 +1,8 @@
 $(document).on('turbolinks:load', function(){
   $(function(){
     function buildHTML(message){
-      console.log(message)
-      var image_url = (message.image)? `<image class="lower-message__image" src="${message.image.url}">`:"";
-        if(message.image) {
+      var image_url = (message.image.url) ? `<image class="lower-message__image" src="${message.image.url}">` : "";
+    if(message.content && message.image) {
           var html = `<div class="message" data-messageId='${message.id}' data-groundId="${message.group_id}">
             <div class="upper-message" >
               <div class="upper-message__name">
@@ -14,12 +13,12 @@ $(document).on('turbolinks:load', function(){
             </div>
           </div>
             <div class="lower-message">
-              <p class="lower-message__content"></p>
+              <p class="lower-message__content">
                 ${message.content}
+              </p>
                 ${image_url}
             </div>`
-      return html;
-    } else {
+    } else if(message.image) {
       var html =  `<div class="message" data-messageId='${message.id}' data-groundId="${message.group_id}">
       <div class="upper-message" >
         <div class="upper-message__name">
@@ -30,12 +29,28 @@ $(document).on('turbolinks:load', function(){
       </div>
     </div>
       <div class="lower-message">
-        <p class="lower-message__content"></p>
-          ${message.content}
+        <p class="lower-message__content">
+          ${image_url}
+        </p>
       </div>`
-      return html;
+    } else if (message.content) {
+      var html =  `<div class="message" data-messageId='${message.id}' data-groundId="${message.group_id}">
+      <div class="upper-message" >
+        <div class="upper-message__name">
+          ${message.name}
+      </div>
+        <div class="upper-message__time">
+          ${message.time}
+      </div>
+    </div>
+      <div class="lower-message">
+        <p class="lower-message__content">
+          ${message.content}
+        </p>
+      </div>`
     };
-  }
+    return html;
+  };
       function always(){
         $('.form__submit').prop('disabled',false);
       }
@@ -74,9 +89,9 @@ $(document).on('turbolinks:load', function(){
         data: {id: last_message_id}
       })
       .done(function(data) {
-        $.each(data,function(i,message){
-          var insertHTML = buildHTML(message);
-          $('.messages').append(insertHTML);
+        data.forEach(function(message){
+        var HTML = buildHTML(message);
+          $('.messages').append(HTML);
           $(".messages").animate({scrollTop: $(".messages")[0].scrollHeight+100}, "fast");
         })
       })
