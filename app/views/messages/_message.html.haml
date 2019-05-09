@@ -1,4 +1,4 @@
-.message{ 'data-message-id': message.id }
+.message{data: {messageId: "#{message.id}", groupId: "#{message.group_id}"}}
 	.upper-message
 		.upper-message__name 
 			= message.user.name
