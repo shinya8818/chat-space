@@ -12,6 +12,6 @@ CarrierWave.configure do |config|
     region: 'ap-northeast-1'
   }
 
-  config.fog_directory  = 'ここにバケット名を入れます'
+  config.fog_directory  = 'wacker8818'
   config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/wacker8818'
 end
